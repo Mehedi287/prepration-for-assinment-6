@@ -12,10 +12,11 @@ const setPhoto = (photos) => {
     for (const photo of photos) {
         console.log(photo);
         const div = document.createElement('div');
+        div.classList.add('col')
 
         div.innerHTML = `
     <div class="card mx-auto mt-4" style="width: 18rem;">
-        <img id="img" src="${photo.thumbnailUrl}" class="card-img-top" alt="...">
+        <img      " src="${photo.thumbnailUrl}" class="card-img-top" alt="...">
          <div class="card-body">
             <h5 class="card-title"> ${photo.title}</h5>
 
@@ -25,7 +26,4 @@ const setPhoto = (photos) => {
     `;
         cardContainer.appendChild(div)
     }
-
-
 }
-
